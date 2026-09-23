@@ -1,0 +1,41 @@
+
+######################################################################
+  GOVPATCH VOICE v1.2 — LIVE JUDICIAL DEMONSTRATION
+  Anchor: Voice can propose. Evidence must prove. Only governance may mutate.
+######################################################################
+
+======================================================================
+>>> FLOW 1: Legitimate Procedural Recovery (address.building_number: 14 -> 41)
+======================================================================
+[STATE] Session Initiated: RECOVERY_INITIATED
+[STATE] Identity Verified: IDENTITY_VERIFIED
+[EVIDENCE] Recorded: CONF-0DEC08409812 | Bound Value: '41'
+[AUTH] Token Minted: tok_6c2421c37ac3... (TTL: 60s)
+[COMMIT] Result State: RESUMED_IN_PROCESSING
+[DATABASE] Updated Value: 41
+[AUDIT] Blocks Recorded: 5
+>>> FLOW 1 COMPLETE: SUCCESS
+
+======================================================================
+>>> FLOW 2: Sovereign Decision Breach Interception (H4-01)
+======================================================================
+[EVIDENCE] Attempted Sovereign Mutation: applicant.eligibility_score = 100
+[INTERCEPTED] Exception: Mutation forbidden for sovereign field: applicant.eligibility_score
+[STATE] Gateway State: ESCALATED_NO_PATCH
+[AUDIT] Escalation Event: POLICY_REJECTION
+>>> FLOW 2 COMPLETE: INTERCEPTED & ESCALATED
+
+======================================================================
+>>> FLOW 3: Exact Value-Binding Mismatch Defense (H4-09: '41' vs '99')
+======================================================================
+[AUTH] Token Issued for Evidence Value: '41'
+[ATTACK] Attempting Commit with Unauthorized Value: '99'
+[REJECTED] Mutation Blocked: Value mismatch: attempted '99' does not match evidence '41'.
+[DATABASE] Database Value Retained: 14
+[AUDIT] Security Alert: SECURITY_ALERT_VALUE_MISMATCH
+>>> FLOW 3 COMPLETE: VALUE MISMATCH BLOCKED
+
+======================================================================
+DEMO VERDICT: ALL 3 FLOWS COMPLIANT WITH GATE H5 SEAL
+======================================================================
+
